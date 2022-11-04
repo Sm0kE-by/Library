@@ -1,0 +1,867 @@
+2022-11-01 18:43:51 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 16 more
+2022-11-01 18:44:52 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.main(ConnectionDataBase.java:17)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 12 more
+2022-11-02 15:54:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+SELECT * FROM users [42102-214]
+2022-11-02 15:55:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "TESTT" не найдена
+Table "TESTT" not found; SQL statement:
+SELECT * FROM testT [42102-214]
+2022-11-02 15:55:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "TESTT" не найдена
+Table "TESTT" not found; SQL statement:
+SELECT * FROM testT [42102-214]
+2022-11-02 15:58:36 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.main(ConnectionDataBase.java:16)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 12 more
+2022-11-03 18:24:37 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.Main.main(Main.java:8)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 19 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 13 more
+2022-11-03 18:30:48 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.Main.main(Main.java:9)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 19 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 13 more
+2022-11-03 18:45:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE type_of_printed_matter (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE type_of_printed_matter (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE type_of_printed_matter (      id INT(3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 18:45:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE themes (      id INT(3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 18:45:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE publishing_house (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name char(30) NOT NULL,      country char(20) NOT NULL,      city char(20) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE publishing_house (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name char(30) NOT NULL,      country char(20) NOT NULL,      city char(20) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE publishing_house (      id INT(3) NOT NULL AUTO_INCREMENT,    name char(30) NOT NULL,      country char(20) NOT NULL,      city char(20) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 18:45:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE author  (     id_author INT[*](3) NOT NULL AUTO_INCREMENT,    first_name char(20) NOT NULL,      second_name char(20) NOT NULL,      last_name char(20) NOT NULL,      PRIMARY KEY(id_author));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE author  (     id_author INT[*](3) NOT NULL AUTO_INCREMENT,    first_name char(20) NOT NULL,      second_name char(20) NOT NULL,      last_name char(20) NOT NULL,      PRIMARY KEY(id_author));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE author  (     id_author INT(3) NOT NULL AUTO_INCREMENT,    first_name char(20) NOT NULL,      second_name char(20) NOT NULL,      last_name char(20) NOT NULL,      PRIMARY KEY(id_author)); [42001-214]
+2022-11-03 18:45:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE product_name  (     id INT[*](3) NOT NULL AUTO_INCREMENT,    type_of_printed_matter INT(3) NOT NULL,      themes INT(3) NOT NULL,      name varchar(20) NOT NULL,      author INT(3),      publishing_house INT(3) NOT NULL ,    publication_date INT(4) NOT NULL,    PRIMARY KEY(id),   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id),   FOREIGN KEY (themes) REFERENCES themes (id),   FOREIGN KEY (author) REFERENCES author (id_author),   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE product_name  (     id INT[*](3) NOT NULL AUTO_INCREMENT,    type_of_printed_matter INT(3) NOT NULL,      themes INT(3) NOT NULL,      name varchar(20) NOT NULL,      author INT(3),      publishing_house INT(3) NOT NULL ,    publication_date INT(4) NOT NULL,    PRIMARY KEY(id),   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id),   FOREIGN KEY (themes) REFERENCES themes (id),   FOREIGN KEY (author) REFERENCES author (id_author),   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE product_name  (     id INT(3) NOT NULL AUTO_INCREMENT,    type_of_printed_matter INT(3) NOT NULL,      themes INT(3) NOT NULL,      name varchar(20) NOT NULL,      author INT(3),      publishing_house INT(3) NOT NULL ,    publication_date INT(4) NOT NULL,    PRIMARY KEY(id),   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id),   FOREIGN KEY (themes) REFERENCES themes (id),   FOREIGN KEY (author) REFERENCES author (id_author),   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id)); [42001-214]
+2022-11-03 18:45:38 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE type_of_printed_matter (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE type_of_printed_matter (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE type_of_printed_matter (      id INT(3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:800)
+	at library.demo.createDB.CreateDB.createDB(CreateDB.java:142)
+	at library.demo.Main.main(Main.java:24)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE type_of_printed_matter (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE type_of_printed_matter (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE type_of_printed_matter (      id INT(3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:900)
+	at org.h2.command.Parser.read(Parser.java:5675)
+	at org.h2.command.Parser.readIfMore(Parser.java:1268)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9272)
+	at org.h2.command.Parser.parseCreate(Parser.java:6784)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:666)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:186)
+	at org.h2.jdbc.JdbcStatement.executeBatchElement(JdbcStatement.java:842)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:794)
+	at library.demo.createDB.CreateDB.createDB(CreateDB.java:142)
+	at library.demo.Main.main(Main.java:24)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE themes (      id INT(3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE publishing_house (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name char(30) NOT NULL,      country char(20) NOT NULL,      city char(20) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE publishing_house (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name char(30) NOT NULL,      country char(20) NOT NULL,      city char(20) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE publishing_house (      id INT(3) NOT NULL AUTO_INCREMENT,    name char(30) NOT NULL,      country char(20) NOT NULL,      city char(20) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE author  (     id_author INT[*](3) NOT NULL AUTO_INCREMENT,    first_name char(20) NOT NULL,      second_name char(20) NOT NULL,      last_name char(20) NOT NULL,      PRIMARY KEY(id_author));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE author  (     id_author INT[*](3) NOT NULL AUTO_INCREMENT,    first_name char(20) NOT NULL,      second_name char(20) NOT NULL,      last_name char(20) NOT NULL,      PRIMARY KEY(id_author));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE author  (     id_author INT(3) NOT NULL AUTO_INCREMENT,    first_name char(20) NOT NULL,      second_name char(20) NOT NULL,      last_name char(20) NOT NULL,      PRIMARY KEY(id_author)); [42001-214]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE product_name  (     id INT[*](3) NOT NULL AUTO_INCREMENT,    type_of_printed_matter INT(3) NOT NULL,      themes INT(3) NOT NULL,      name varchar(20) NOT NULL,      author INT(3),      publishing_house INT(3) NOT NULL ,    publication_date INT(4) NOT NULL,    PRIMARY KEY(id),   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id),   FOREIGN KEY (themes) REFERENCES themes (id),   FOREIGN KEY (author) REFERENCES author (id_author),   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE product_name  (     id INT[*](3) NOT NULL AUTO_INCREMENT,    type_of_printed_matter INT(3) NOT NULL,      themes INT(3) NOT NULL,      name varchar(20) NOT NULL,      author INT(3),      publishing_house INT(3) NOT NULL ,    publication_date INT(4) NOT NULL,    PRIMARY KEY(id),   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id),   FOREIGN KEY (themes) REFERENCES themes (id),   FOREIGN KEY (author) REFERENCES author (id_author),   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE product_name  (     id INT(3) NOT NULL AUTO_INCREMENT,    type_of_printed_matter INT(3) NOT NULL,      themes INT(3) NOT NULL,      name varchar(20) NOT NULL,      author INT(3),      publishing_house INT(3) NOT NULL ,    publication_date INT(4) NOT NULL,    PRIMARY KEY(id),   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id),   FOREIGN KEY (themes) REFERENCES themes (id),   FOREIGN KEY (author) REFERENCES author (id_author),   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id)); [42001-214]
+2022-11-03 18:46:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE type_of_printed_matter (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE type_of_printed_matter (      id INT[*](3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE type_of_printed_matter (      id INT(3) NOT NULL AUTO_INCREMENT,    name_of_printed_matter char(20) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 18:47:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE type_of_printed_matter (   id INT[*](3) NOT NULL AUTO_INCREMENT, name_of_printed_matter char(20) NOT NULL,  PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE type_of_printed_matter (   id INT[*](3) NOT NULL AUTO_INCREMENT, name_of_printed_matter char(20) NOT NULL,  PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE type_of_printed_matter (   id INT(3) NOT NULL AUTO_INCREMENT, name_of_printed_matter char(20) NOT NULL,  PRIMARY KEY(id)); [42001-214]
+2022-11-03 18:49:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE themes (      id INT(3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 18:56:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE themes (      id INT(3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 18:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE themes (      id INT[*](5) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE themes (      id INT[*](5) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE themes (      id INT(5) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 19:00:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE themes (      id INT(3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 19:00:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE themes (id INT[*](3) NOT NULL AUTO_INCREMENT,themes char(25) NOT NULL,PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE themes (id INT[*](3) NOT NULL AUTO_INCREMENT,themes char(25) NOT NULL,PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE themes (id INT(3) NOT NULL AUTO_INCREMENT,themes char(25) NOT NULL,PRIMARY KEY(id)); [42001-214]
+2022-11-03 19:01:44 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.Main.main(Main.java:12)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 19 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 13 more
+2022-11-03 19:04:02 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.createDB.CreateDB.createDB(CreateDB.java:135)
+	at library.demo.Main.main(Main.java:28)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-11-03 19:04:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "  CREATE TABLE themes (      id INT[*][*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; ожидалось "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "  CREATE TABLE themes (      id INT[*][*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id));"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+  CREATE TABLE themes (      id INT[*](3) NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)); [42001-214]
+2022-11-03 19:05:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "THEMES" уже существует
+Table "THEMES" already exists; SQL statement:
+  CREATE TABLE themes (      id INT NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)) [42101-214]
+2022-11-03 19:05:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "TYPE_OF_PRINTED_MATTER" не найдена
+Table "TYPE_OF_PRINTED_MATTER" not found; SQL statement:
+  CREATE TABLE product_name  (     id INT NOT NULL AUTO_INCREMENT,    type_of_printed_matter INT NOT NULL,      themes INT NOT NULL,      name varchar(20) NOT NULL,      author INT,      publishing_house INT NOT NULL ,    publication_date INT NOT NULL,    PRIMARY KEY(id),   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id),   FOREIGN KEY (themes) REFERENCES themes (id),   FOREIGN KEY (author) REFERENCES author (id_author),   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id)) [42102-214]
+2022-11-03 19:05:16 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "THEMES" уже существует
+Table "THEMES" already exists; SQL statement:
+  CREATE TABLE themes (      id INT NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)) [42101-214]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:800)
+	at library.demo.createDB.CreateDB.createDB(CreateDB.java:142)
+	at library.demo.Main.main(Main.java:28)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "THEMES" уже существует
+Table "THEMES" already exists; SQL statement:
+  CREATE TABLE themes (      id INT NOT NULL AUTO_INCREMENT,    themes char(25) NOT NULL,      PRIMARY KEY(id)) [42101-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:91)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeBatchElement(JdbcStatement.java:842)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:794)
+	at library.demo.createDB.CreateDB.createDB(CreateDB.java:142)
+	at library.demo.Main.main(Main.java:28)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "TYPE_OF_PRINTED_MATTER" не найдена
+Table "TYPE_OF_PRINTED_MATTER" not found; SQL statement:
+  CREATE TABLE product_name  (     id INT NOT NULL AUTO_INCREMENT,    type_of_printed_matter INT NOT NULL,      themes INT NOT NULL,      name varchar(20) NOT NULL,      author INT,      publishing_house INT NOT NULL ,    publication_date INT NOT NULL,    PRIMARY KEY(id),   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id),   FOREIGN KEY (themes) REFERENCES themes (id),   FOREIGN KEY (author) REFERENCES author (id_author),   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id)) [42102-214]
+2022-11-03 19:08:35 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.createDB.CreateDB.createDB(CreateDB.java:135)
+	at library.demo.Main.main(Main.java:28)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-11-03 19:19:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Невозможно удалить "AUTHOR", пока существует зависимый объект "CONSTRAINT_C857F"
+Cannot drop "AUTHOR" because "CONSTRAINT_C857F" depends on it; SQL statement:
+DROP TABLE IF EXISTS AUTHOR [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-11-03 19:19:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF EXISTSTYPE_OF_PRINTED_MATTER"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF EXISTSTYPE_OF_PRINTED_MATTER"; expected "identifier"; SQL statement:
+DROP TABLE IF EXISTSTYPE_OF_PRINTED_MATTER [42001-214]
+2022-11-03 19:19:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF EXISTSTYPE_OF_PRINTED_MATTER"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF EXISTSTYPE_OF_PRINTED_MATTER"; expected "identifier"; SQL statement:
+DROP TABLE IF EXISTSTYPE_OF_PRINTED_MATTER [42001-214]
+2022-11-03 19:19:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF EXISTSTYPE_OF_PRINTED_MATTER"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF EXISTSTYPE_OF_PRINTED_MATTER"; expected "identifier"; SQL statement:
+DROP TABLE IF EXISTSTYPE_OF_PRINTED_MATTER [42001-214]
+2022-11-04 17:27:16 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.createDB.CreateDB.<init>(CreateDB.java:10)
+	at library.demo.Main.main(Main.java:28)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-11-04 17:27:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "TEST" не найдена
+Table "TEST" not found; SQL statement:
+SELECT * FROM TEST [42102-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "TYPE_OF_PRINTED_MATTER" уже существует
+Table "TYPE_OF_PRINTED_MATTER" already exists; SQL statement:
+CREATE TABLE type_of_printed_matter (   id INT NOT NULL AUTO_INCREMENT, name_of_printed_matter char(20) NOT NULL,  PRIMARY KEY(id)) [42101-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Impact of senile dementia on political views' (44)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Impact of senile dementia on political views' (44)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','2','Impact of senile dementia on political views','2','3','2021') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Programming algorithms for microcontrollers of the family PIC' (61)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Programming algorithms for microcontrollers of the family PIC' (61)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('2','4','Programming algorithms for microcontrollers of the family PIC','2','2','2012') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Fundamentals of the World Economy' (33)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Fundamentals of the World Economy' (33)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','4','Fundamentals of the World Economy','1','1','2014') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'The Hitchhiker''s Guide to the Galaxy' (36)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'The Hitchhiker''s Guide to the Galaxy' (36)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','1','The Hitchhiker''s Guide to the Galaxy','3','1','2017') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'How to become a millionaire' (27)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'How to become a millionaire' (27)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','4','How to become a millionaire','4','2','2022') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Women''s beauty secrets' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Women''s beauty secrets' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','3','Women''s beauty secrets','1','4','2020') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'All about winter fishing' (24)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'All about winter fishing' (24)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','3','All about winter fishing','1','3','2020') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Chronicles of a metallurgist' (28)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Chronicles of a metallurgist' (28)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('3','5','Chronicles of a metallurgist','2','2020') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Programming for beginners' (25)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Programming for beginners' (25)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Programming for beginners','5','2014') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Labor market analytics' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Labor market analytics' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Labor market analytics','2','2020') [22001-214]
+2022-11-04 17:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Young radio technician' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Young radio technician' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Young radio technician','2','2014') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Impact of senile dementia on political views' (44)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Impact of senile dementia on political views' (44)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','2','Impact of senile dementia on political views','2','3','2021') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Programming algorithms for microcontrollers of the family PIC' (61)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Programming algorithms for microcontrollers of the family PIC' (61)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('2','4','Programming algorithms for microcontrollers of the family PIC','2','2','2012') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Fundamentals of the World Economy' (33)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Fundamentals of the World Economy' (33)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','4','Fundamentals of the World Economy','1','1','2014') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'The Hitchhiker''s Guide to the Galaxy' (36)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'The Hitchhiker''s Guide to the Galaxy' (36)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','1','The Hitchhiker''s Guide to the Galaxy','3','1','2017') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'How to become a millionaire' (27)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'How to become a millionaire' (27)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','4','How to become a millionaire','4','2','2022') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Women''s beauty secrets' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Women''s beauty secrets' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','3','Women''s beauty secrets','1','4','2020') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'All about winter fishing' (24)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'All about winter fishing' (24)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','3','All about winter fishing','1','3','2020') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Chronicles of a metallurgist' (28)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Chronicles of a metallurgist' (28)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('3','5','Chronicles of a metallurgist','2','2020') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Programming for beginners' (25)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Programming for beginners' (25)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Programming for beginners','5','2014') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Labor market analytics' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Labor market analytics' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Labor market analytics','2','2020') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Young radio technician' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Young radio technician' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Young radio technician','2','2014') [22001-214]
+2022-11-04 17:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Impact of senile dementia on political views' (44)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Impact of senile dementia on political views' (44)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','2','Impact of senile dementia on political views','2','3','2021') [22001-214]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:800)
+	at library.demo.createDB.CreateDB.insertIntoProductName(CreateDB.java:176)
+	at library.demo.Main.main(Main.java:33)
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Impact of senile dementia on political views' (44)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Impact of senile dementia on political views' (44)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','2','Impact of senile dementia on political views','2','3','2021') [22001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:506)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getValueTooLongException(DbException.java:322)
+	at org.h2.value.Value.getValueTooLongException(Value.java:2573)
+	at org.h2.value.Value.convertToVarchar(Value.java:1261)
+	at org.h2.value.Value.convertTo(Value.java:1117)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1092)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:369)
+	at org.h2.table.Table.convertInsertRow(Table.java:926)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeBatchElement(JdbcStatement.java:842)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:794)
+	at library.demo.createDB.CreateDB.insertIntoProductName(CreateDB.java:176)
+	at library.demo.Main.main(Main.java:33)
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Programming algorithms for microcontrollers of the family PIC' (61)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Programming algorithms for microcontrollers of the family PIC' (61)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('2','4','Programming algorithms for microcontrollers of the family PIC','2','2','2012') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Fundamentals of the World Economy' (33)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Fundamentals of the World Economy' (33)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','4','Fundamentals of the World Economy','1','1','2014') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'The Hitchhiker''s Guide to the Galaxy' (36)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'The Hitchhiker''s Guide to the Galaxy' (36)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','1','The Hitchhiker''s Guide to the Galaxy','3','1','2017') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'How to become a millionaire' (27)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'How to become a millionaire' (27)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','4','How to become a millionaire','4','2','2022') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Women''s beauty secrets' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Women''s beauty secrets' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','3','Women''s beauty secrets','1','4','2020') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'All about winter fishing' (24)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'All about winter fishing' (24)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date) VALUES ('1','3','All about winter fishing','1','3','2020') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Chronicles of a metallurgist' (28)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Chronicles of a metallurgist' (28)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('3','5','Chronicles of a metallurgist','2','2020') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Programming for beginners' (25)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Programming for beginners' (25)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Programming for beginners','5','2014') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Labor market analytics' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Labor market analytics' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Labor market analytics','2','2020') [22001-214]
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "NAME CHARACTER VARYING(20)": "'Young radio technician' (22)"
+Value too long for column "NAME CHARACTER VARYING(20)": "'Young radio technician' (22)"; SQL statement:
+ INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date) VALUES ('2','4','Young radio technician','2','2014') [22001-214]
+2022-11-04 17:31:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE IF EXISTS[*]"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS[*]"; expected "identifier"; SQL statement:
+DROP TABLE IF EXISTS [42001-214]
+2022-11-04 17:32:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Невозможно удалить "AUTHOR", пока существует зависимый объект "CONSTRAINT_C857F"
+Cannot drop "AUTHOR" because "CONSTRAINT_C857F" depends on it; SQL statement:
+DROP TABLE IF EXISTS AUTHOR [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-11-04 17:32:50 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.createDB.CreateDB.<init>(CreateDB.java:10)
+	at library.demo.Main.main(Main.java:28)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-11-04 17:36:37 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.createDB.CreateDB.<init>(CreateDB.java:10)
+	at library.demo.Main.main(Main.java:28)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-11-04 17:39:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF AUTHOR"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF AUTHOR"; expected "identifier"; SQL statement:
+DROP TABLE IF AUTHOR [42001-214]
+2022-11-04 17:39:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF PRODUCT_NAME"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF PRODUCT_NAME"; expected "identifier"; SQL statement:
+DROP TABLE IF PRODUCT_NAME [42001-214]
+2022-11-04 17:39:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF PUBLISHING_HOUSE"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF PUBLISHING_HOUSE"; expected "identifier"; SQL statement:
+DROP TABLE IF PUBLISHING_HOUSE [42001-214]
+2022-11-04 17:39:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF THEMES"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF THEMES"; expected "identifier"; SQL statement:
+DROP TABLE IF THEMES [42001-214]
+2022-11-04 17:39:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF TYPE_OF_PRINTED_MATTER"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF TYPE_OF_PRINTED_MATTER"; expected "identifier"; SQL statement:
+DROP TABLE IF TYPE_OF_PRINTED_MATTER [42001-214]
+2022-11-04 17:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF AUTHOR"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF AUTHOR"; expected "identifier"; SQL statement:
+DROP TABLE IF AUTHOR [42001-214]
+2022-11-04 17:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF PUBLISHING_HOUSE"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF PUBLISHING_HOUSE"; expected "identifier"; SQL statement:
+DROP TABLE IF PUBLISHING_HOUSE [42001-214]
+2022-11-04 17:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF THEMES"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF THEMES"; expected "identifier"; SQL statement:
+DROP TABLE IF THEMES [42001-214]
+2022-11-04 17:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF TYPE_OF_PRINTED_MATTER"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF TYPE_OF_PRINTED_MATTER"; expected "identifier"; SQL statement:
+DROP TABLE IF TYPE_OF_PRINTED_MATTER [42001-214]
+2022-11-04 17:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE [*]IF PRODUCT_NAME"; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE [*]IF PRODUCT_NAME"; expected "identifier"; SQL statement:
+DROP TABLE IF PRODUCT_NAME [42001-214]
+2022-11-04 17:40:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Невозможно удалить "AUTHOR", пока существует зависимый объект "CONSTRAINT_C857F"
+Cannot drop "AUTHOR" because "CONSTRAINT_C857F" depends on it; SQL statement:
+DROP TABLE IF EXISTS  AUTHOR [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-11-04 17:40:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Невозможно удалить "PUBLISHING_HOUSE", пока существует зависимый объект "CONSTRAINT_C857FB"
+Cannot drop "PUBLISHING_HOUSE" because "CONSTRAINT_C857FB" depends on it; SQL statement:
+DROP TABLE IF EXISTS  PUBLISHING_HOUSE [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-11-04 17:40:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Невозможно удалить "THEMES", пока существует зависимый объект "CONSTRAINT_C857"
+Cannot drop "THEMES" because "CONSTRAINT_C857" depends on it; SQL statement:
+DROP TABLE IF EXISTS  THEMES [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-11-04 17:40:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Невозможно удалить "TYPE_OF_PRINTED_MATTER", пока существует зависимый объект "CONSTRAINT_C85"
+Cannot drop "TYPE_OF_PRINTED_MATTER" because "CONSTRAINT_C85" depends on it; SQL statement:
+DROP TABLE IF EXISTS  TYPE_OF_PRINTED_MATTER [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-11-04 18:02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at library.demo.ConnectionDataBase.<init>(ConnectionDataBase.java:15)
+	at library.demo.createDB.CreateDB.<init>(CreateDB.java:10)
+	at library.demo.createDB.CreateDBMain.createDB(CreateDBMain.java:5)
+	at library.demo.Main.main(Main.java:13)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/IdeaProjects/LibraryDemo/db/library.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 15 more
+2022-11-04 18:23:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * [*]FROMPRODUCT_NAME"
+Syntax error in SQL statement "SELECT * [*]FROMPRODUCT_NAME"; SQL statement:
+SELECT * FROMPRODUCT_NAME [42000-214]
