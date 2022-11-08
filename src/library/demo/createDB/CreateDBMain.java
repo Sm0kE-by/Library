@@ -1,6 +1,6 @@
 package library.demo.createDB;
 
-public class CreateDBMain  {
+public class CreateDBMain {
     public CreateDB createDB() {
         CreateDB createDB = new CreateDB();
         createDB.createTables();
@@ -8,6 +8,7 @@ public class CreateDBMain  {
         createDB.insertIntoThemes();
         createDB.insertIntoPublishingHouse();
         createDB.insertIntoTypeOfPrintedMatter();
+        createDB.insertIntoPublicationDate();
         createDB.insertIntoProductName();
         return null;
     }

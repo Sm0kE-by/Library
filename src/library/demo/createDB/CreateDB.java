@@ -1,6 +1,6 @@
 package library.demo.createDB;
 
-import library.demo.ConnectionDataBase;
+import library.demo.DAO.ConnectionDataBase;
 
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -33,6 +33,10 @@ class CreateDB implements CreateTablesAndInsert{
                     "   second_name char(20) NOT NULL,   " +
                     "   last_name char(20) NOT NULL,   " +
                     "   PRIMARY KEY(id_author));");
+            statement.executeUpdate("CREATE TABLE publication_date (  " +
+                    " id INT NOT NULL AUTO_INCREMENT," +
+                    " publication_date INT NOT NULL, " +
+                    " PRIMARY KEY(id));");
             statement.executeUpdate("  CREATE TABLE product_name  (  " +
                     "   id INT NOT NULL AUTO_INCREMENT, " +
                     "   type_of_printed_matter INT NOT NULL,   " +
@@ -45,6 +49,7 @@ class CreateDB implements CreateTablesAndInsert{
                     "   FOREIGN KEY (type_of_printed_matter) REFERENCES type_of_printed_matter (id)," +
                     "   FOREIGN KEY (themes) REFERENCES themes (id)," +
                     "   FOREIGN KEY (author) REFERENCES author (id_author)," +
+                    "   FOREIGN KEY (publication_date) REFERENCES publication_date (id)," +
                     "   FOREIGN KEY (publishing_house) REFERENCES publishing_house (id));");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -114,71 +119,93 @@ class CreateDB implements CreateTablesAndInsert{
         }
         return null;
     }
+    @Override
+    public CreateDB insertIntoPublicationDate() {
+
+        try (Statement statement = connectionDataBase.getConnection().createStatement()) {
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2007');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2011');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2012');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2013');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2014');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2016');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2017');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2018');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2019');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2020');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2021');");
+            statement.addBatch( " INSERT INTO publication_date (publication_date) VALUES ('2022');");
+            statement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     @Override
     public CreateDB insertIntoProductName() {
 
         try (Statement statement = connectionDataBase.getConnection().createStatement()) {
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','1','From dirt to Kings','2','3','2022');");
+                    " VALUES ('1','1','From dirt to Kings','2','3','12');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','2','Impact of senile dementia on political views','2','3','2021');");
+            " VALUES ('1','2','Impact of senile dementia on political views','2','3','11');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('2','4','Programming algorithms for microcontrollers of the family PIC','2','2','2012');");
+            " VALUES ('2','4','Programming algorithms for microcontrollers of the family PIC','2','2','3');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','4','Fundamentals of the World Economy','1','1','2014');");
+            " VALUES ('1','4','Fundamentals of the World Economy','1','1','5');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','1','Tiered world','4','1','2014');");
+            " VALUES ('1','1','Tiered world','4','1','5');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','1','The Hitchhiker''s Guide to the Galaxy','3','1','2017');");
+            " VALUES ('1','1','The Hitchhiker''s Guide to the Galaxy','3','1','7');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','1','Faceless Hero','3','1','2021');");
+            " VALUES ('1','1','Faceless Hero','3','1','11');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','1','Secret materials','4','1','2017');");
+            " VALUES ('1','1','Secret materials','4','1','7');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','1','Galaxy news','3','1','2020');");
+            " VALUES ('1','1','Galaxy news','3','1','10');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','4','How to become a millionaire','4','2','2022');");
+            " VALUES ('1','4','How to become a millionaire','4','2','12');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','1','Galactic patrol','2','1','2016');");
+            " VALUES ('1','1','Galactic patrol','2','1','6');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','1','Lord of the Rings','2','1','2013');");
+            " VALUES ('1','1','Lord of the Rings','2','1','4');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','3','Book of recipes','4','3','2021');");
+            " VALUES ('1','3','Book of recipes','4','3','11');");
             statement.addBatch(  " INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','3','Women''s beauty secrets','1','4','2020');");
+            " VALUES ('1','3','Women''s beauty secrets','1','4','10');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','4','Business analytics','1','5','2021');");
+            " VALUES ('1','4','Business analytics','1','5','11');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, author, publishing_house, publication_date)" +
-            " VALUES ('1','3','All about winter fishing','1','3','2020');");
+            " VALUES ('1','3','All about winter fishing','1','3','10');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('2','3','Young needleworker','3','2011');");
+            " VALUES ('2','3','Young needleworker','3','2');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('2','3','Rich and beautiful','4','2007');");
+            " VALUES ('2','3','Rich and beautiful','4','1');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('3','5','Moscow time','1','2010');");
+            " VALUES ('3','5','Moscow time','1','1');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('3','5','Chronicles of a metallurgist','2','2020');");
+            " VALUES ('3','5','Chronicles of a metallurgist','2','10');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('3','5','Gomel truth','3','2014');");
+            " VALUES ('3','5','Gomel truth','3','5');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('2','3','Healthy sleep','4','2018');");
+            " VALUES ('2','3','Healthy sleep','4','8');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('3','3','Health in every home','4','2019');");
+            " VALUES ('3','3','Health in every home','4','9');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('2','4','Programming for beginners','5','2014');");
+            " VALUES ('2','4','Programming for beginners','5','5');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('3','3','Hunting and fishing','3','2014');");
+            " VALUES ('3','3','Hunting and fishing','3','5');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('2','3','Miss Universe','4','2014');");
+            " VALUES ('2','3','Miss Universe','4','5');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('3','3','my Garden','5','2014');");
+            " VALUES ('3','3','my Garden','5','5');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('2','4','Labor market analytics','2','2020');");
+            " VALUES ('2','4','Labor market analytics','2','10');");
             statement.addBatch(" INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('3','5','Student News Portal','3','2014');");
+            " VALUES ('3','5','Student News Portal','3','5');");
             statement.addBatch( " INSERT INTO product_name (type_of_printed_matter, themes, name, publishing_house, publication_date)" +
-            " VALUES ('2','4','Young radio technician','2','2014');");
+            " VALUES ('2','4','Young radio technician','2','5');");
             statement.executeBatch();
         } catch (SQLException e) {
             e.printStackTrace();
